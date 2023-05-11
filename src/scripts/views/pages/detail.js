@@ -29,6 +29,10 @@ const Detail = {
         pictureId: restaurant.restaurant.pictureId,
       },
     });
+    const heroSection = document.querySelector('#hero_section');
+    if (heroSection) {
+      heroSection.remove();
+    }
   },
 };
 

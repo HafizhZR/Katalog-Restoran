@@ -5,7 +5,7 @@ const Favorite = {
   async render() {
     return `
       <div class="content">
-        <h2 class="content__heading">Your Liked Restaurant</h2>
+        <h2 class="content__heading">Your Favorite Restaurant</h2>
         <div id="restaurants" class="restaurants">
         </div>
       </div>
@@ -19,6 +19,10 @@ const Favorite = {
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+    const heroSection = document.querySelector('#hero_section');
+    if (heroSection) {
+      heroSection.remove();
+    }
   },
 };
 

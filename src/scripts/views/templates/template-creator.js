@@ -1,39 +1,39 @@
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <h2 class="restaurant__title">${restaurant.name}</h2>
-  <div class="container_info">
-  <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.title}" />
-  <div class="restaurant__info">
-    <h3>Information</h3>
-    <h4>Rating</h4>
-    <p>${restaurant.rating} / 5</p>
-    <h4>Alamat</h4>
-    <p>${restaurant.address}</p>
-    <h4>Kota</h4>
-    <p>${restaurant.city}</p>
-    <h4>Kategori</h4>
-    <p>${restaurant.categories.reduce((show, kategori) => show.concat(`<li>${kategori.name}</li>`), '')}</p>
-  </div>
-  </div>
-  <div class="description">
-    <h4>Deskripsi</h4>
-    <p>${restaurant.description}</p>
-  </div>
-  <div class="restaurant_menu_list">
-    <h4>Daftar Makanan</h4>
-    <p>${restaurant.menus.foods.reduce((show, food) => show.concat(`<li>${food.name}</li>`), '')}</p>
-    <h4>Daftar Minuman</h4>
-    <p>${restaurant.menus.drinks.reduce((show, drink) => show.concat(`<li>${drink.name}</li>`), '')}</p>
-  </div>
-  <div class="restaurant__review">
-    <h3>Review Customer</h3>
-    ${restaurant.customerReviews.reduce((show, value) => show.concat(`<br>
-        <p>Nama: <span>${value.name}</span></p>
-        <p>Tanggal: <span>${value.date}</span></p>
-        <p>Review: <span>${value.review}</span></p>
-        `), '')}
-  </div>
+<h2 class="restaurant__title">${restaurant.name}</h2>
+<div class="container_info">
+<img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.title}" />
+<div class="restaurant__info">
+  <h3>Information</h3>
+  <h4>Rating</h4>
+  <p>${restaurant.rating} / 5</p>
+  <h4>Alamat</h4>
+  <p>${restaurant.address}</p>
+  <h4>Kota</h4>
+  <p>${restaurant.city}</p>
+  <h4>Kategori</h4>
+  <p>${restaurant.categories.reduce((show, kategori) => show.concat(`<li>${kategori.name}</li>`), '')}</p>
+</div>
+</div>
+<div class="description">
+  <h3>Deskripsi</h3>
+  <p>${restaurant.description}</p>
+</div>
+<div class="restaurant_menu_list">
+  <h3>Daftar Makanan</h3>
+  <p>${restaurant.menus.foods.reduce((show, food) => show.concat(`<li>${food.name}</li>`), '')}</p>
+  <h3>Daftar Minuman</h3>
+  <p>${restaurant.menus.drinks.reduce((show, drink) => show.concat(`<li>${drink.name}</li>`), '')}</p>
+</div>
+<div class="restaurant__review">
+  <h3>Review Customer</h3>
+  ${restaurant.customerReviews.reduce((show, value) => show.concat(`<br>
+      <p class="name_customer">${value.name}</p>
+      <p class="date_customer">${value.date}</p>
+      <p class="review_customer">Review<span>: <br>${value.review}</span></p>
+      `), '')}
+</div>
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `

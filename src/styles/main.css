@@ -172,7 +172,10 @@ main {
 .content .content__heading {
   display: flex;
   justify-content: center;
+  align-items: cetner;
+  margin-top: 20px;
   font-weight: 800;
+  color: #212A3E;
 }
 
 .content-container {
@@ -276,33 +279,49 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 15px;
+  padding: 15px;
+  background-color: #394867;
+  color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .restaurant .restaurant__poster {
   width: 100%;
   min-width: 300px;
   max-width: 400px;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin: 0px 15px 15px 15px;
 }
 
 .restaurant .restaurant__info h3 {
   margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px;
+  background-color: #9BA4B5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #212A3E;
 }
 
 .restaurant .restaurant__info h4 {
-  margin: 8px 15px;
+  margin: 15px 15px;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .restaurant .restaurant__info p {
   margin-left: 15px;
+  padding: 8px;
 }
 
 .restaurant .restaurant__info li {
   list-style-type: none;
-  margin-left: 15px;
-
+  margin: -15px 15px 10px 15px;
+  padding: 8px;
 }
 
 .restaurant .description{
@@ -310,23 +329,101 @@ main {
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 15px;
+  text-align: center;
 }
 
-.restaurant .restaurant_menu_list h4 {
+.restaurant .description h3 {
+  text-align: center;
+  padding: 15px;
+  background-color: #9BA4B5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #212A3E;
+}
+
+.restaurant .description p {
+  margin-top: 15px;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.restaurant .restaurant_menu_list h3 {
+  margin-top: 40px;
   margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  padding: 15px;
+  background-color: #9BA4B5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #212A3E;
 }
 
 .restaurant .restaurant_menu_list li{
+  margin-top: 15px;
   margin-left: 15px;
+  margin-right: 15px;
   list-style-type: none;
 }
 
+.restaurant_menu_list li {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 8px;
+  list-style-type: none;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.restaurant .restaurant__review {
+  margin-bottom: 15px;
+}
+
 .restaurant .restaurant__review h3 {
+  margin-top: 40px;
   margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  padding: 15px;
+  background-color: #9BA4B5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #212A3E;
 }
 
 .restaurant .restaurant__review p {
   margin-left: 15px;
+  margin-right: 15px;
+  background-color: #f5f5f5;
+  padding: 0px 0px 5px 8px;
+  box-sizing: border-box;
+}
+
+.restaurant .restaurant__review .name_customer {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.restaurant .restaurant__review .date_customer {
+  font-weight: 400;
+  font-size: 14px;
+
+}
+.restaurant .restaurant__review .review_customer {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px;
+  line-height: 1.5;
+  color: #333;
+}
+.restaurant .restaurant__review .review_customer span{
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
  /*
@@ -337,9 +434,9 @@ main {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: #db0000;
+  background-color: #394867;
   color: white;
-  border: 0;
+  border-style: solid;
   border-radius: 50%;
   width: 55px;
   height: 55px;
