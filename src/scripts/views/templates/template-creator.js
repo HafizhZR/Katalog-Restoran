@@ -45,7 +45,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </a>
         <p class="rating">${restaurant.rating}</p>
         </div>
-        <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
+        <h3 class="restaurant__tittle"><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
         <p class="city">Kota: <span>${restaurant.city}</span></p>
         <p>${restaurant.description.slice(0, 230)}...</p>
       </article>
