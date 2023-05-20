@@ -43,10 +43,8 @@ describe('Unliking A Restaurant', () => {
   it('should not throw error if the unliked restaurant is not in the list', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
-    // hapus dulu film dari daftar film yang disukai
     await FavoriteRestaurantIdb.deleteRestaurant(1);
 
-    // kemudian, simulasikan pengguna menekan widget batal menyukai film
     document.querySelector('[aria-label="unlike this restaurant"]')
       .dispatchEvent(new Event('click'));
 
