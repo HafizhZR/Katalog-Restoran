@@ -115,7 +115,7 @@ ul {
 /* Hero Section */
 
 .hero_section {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../public/images/heros/hero-image_2.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../public/images/heros/hero-image_2-large.jpg");
   min-height: 600px;
   background-size: cover;
   background-position: center;
