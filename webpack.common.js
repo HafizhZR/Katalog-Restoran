@@ -76,6 +76,18 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'FoodHeaven-V1',
+            cacheableResponse: {
+              statuses: [200],
+            },
+          },
+        },
+      ],
     }),
     new BundleAnalyzerPlugin(),
   ],
