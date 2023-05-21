@@ -30,7 +30,6 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   const likedRestaurantTitle = await I.grabTextFrom('h3>a');
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
-  
   I.seeElement('h3>a');
   await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);

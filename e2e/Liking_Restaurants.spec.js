@@ -16,11 +16,11 @@ Scenario('liking one restaurant', async ({ I }) => {
   I.amOnPage('/');
   I.seeElement('h3>a');
   I.wait();
- 
   const firstRestaurant = locate('h3>a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
   
   I.click(firstRestaurant);
+  
   I.seeElement('#likeButton');
   I.wait();
   I.click('#likeButton');
